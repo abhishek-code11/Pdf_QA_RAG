@@ -1,0 +1,22 @@
+# --- Python (backend) ---
+# Virtual environment: big, machine-specific, recreated by `pip install -r requirements.txt`
+.venv/
+# Compiled Python cache files, recreated automatically
+__pycache__/
+*.pyc
+
+# --- Node / React (frontend) ---
+# Installed packages, recreated by `npm install`
+node_modules/
+# Output of `npm run build`, recreated any time
+dist/
+
+# --- Editors / OS junk ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Logs & secrets ---
+*.log
+.env

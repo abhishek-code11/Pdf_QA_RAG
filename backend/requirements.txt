@@ -1,0 +1,4 @@
+fastapi        # web framework for the API
+uvicorn        # the server that runs FastAPI
+pypdf          # reads text from PDFs
+ollama         # talks to the local Ollama app

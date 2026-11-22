@@ -1,0 +1,25 @@
+/* Full-height page, no outer scrollbars */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; font-family: system-ui, sans-serif; }
+
+/* Two columns side by side: PDF (bigger) | chat */
+.layout { display: flex; height: 100%; }
+.pdf { flex: 3; border: none; border-right: 1px solid #ddd; }
+.chat { flex: 2; display: flex; flex-direction: column; padding: 16px; background: #f7f8fa; }
+.chat h2 { margin: 0 0 12px; }
+
+/* Messages area grows and scrolls; the form stays pinned at the bottom */
+.messages { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
+.hint { color: #888; }
+
+.bubble { padding: 10px 12px; border-radius: 10px; max-width: 90%; white-space: pre-wrap; line-height: 1.4; }
+.bubble.user { align-self: flex-end; background: #2563eb; color: white; }
+.bubble.bot { align-self: flex-start; background: white; border: 1px solid #e3e3e3; }
+
+details { margin-top: 8px; font-size: 12px; color: #555; }
+.source { background: #f1f1f1; padding: 6px; border-radius: 6px; }
+
+form { display: flex; gap: 8px; margin-top: 12px; }
+input { flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; }
+button { padding: 10px 18px; border: none; border-radius: 8px; background: #2563eb; color: white; cursor: pointer; }
+button:disabled { background: #9db4e8; cursor: not-allowed; }
