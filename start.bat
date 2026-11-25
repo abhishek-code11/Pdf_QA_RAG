@@ -46,7 +46,9 @@ if not exist "frontend\node_modules" (
 
 REM ---- 4 + 5. Start both servers, each in its own window ----
 REM "cmd /k" keeps the window open, so you can read any error messages.
-start "Backend (port 8000)"  cmd /k "cd /d %~dp0backend && .venv\Scripts\uvicorn main:app --port 8000"
+REM "--reload" = uvicorn watches the backend .py files and restarts itself when you save one.
+REM   (The frontend needs nothing: Vite updates the browser on save automatically.)
+start "Backend (port 8000)"  cmd /k "cd /d %~dp0backend && .venv\Scripts\uvicorn main:app --port 8000 --reload"
 start "Frontend (port 5173)" cmd /k "cd /d %~dp0frontend && npm run dev"
 
 REM ---- 6. Wait for the backend (it reads + embeds the PDF on startup) ----
